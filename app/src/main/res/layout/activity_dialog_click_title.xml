@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:background="@color/whiteBackground">
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/whiteBackground"
+        android:id="@+id/personalgrouppdf_layout" >
+
+        <ImageView
+            android:id="@+id/personalimagePdf"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/select_pdf" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="5dp" >
+
+            <TextView
+                android:id="@+id/personaltitle_pdf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Titolo pdf"
+                android:textAlignment="textStart"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/personalpossessor_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nome Cognome"
+                android:textAlignment="textStart"
+                android:textColor="@android:color/black"
+                android:layout_marginRight="10dp"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/like"
+                    android:contentDescription="Like"
+                    android:background="@color/whiteBackground" />
+
+                <TextView
+                    android:id="@+id/personalpdf_like"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0 Mi Piace"
+                    android:textAlignment="textStart"
+                    android:textColor="@android:color/black"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/sblocca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/personalgrouppdf_layout"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
+        android:padding="2dp"
+        android:text="Sblocca"
+        android:background="@drawable/button"
+        android:textColor="@android:color/background_light"
+        app:backgroundTint="@color/colorPrimaryDark"
+        android:textAllCaps="true" />
+
+    <TextView
+        android:id="@+id/costo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sblocca"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="6dp"
+        android:text="Costo: 300"
+        android:textColor="@color/colorProfile" />
+
+    <ImageView
+        android:id="@+id/valuta"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ap_punti"
+        android:layout_toRightOf="@id/costo"
+        android:layout_below="@id/sblocca"
+        android:layout_marginLeft="2dp" />
+
+    <Button
+        android:id="@+id/dettagli"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/personalgrouppdf_layout"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:padding="2dp"
+        android:text="Dettagli"
+        android:background="@drawable/button"
+        android:textColor="@android:color/background_light"
+        app:backgroundTint="@color/colorPrimaryDark"
+        android:textAllCaps="true" />
+
+</RelativeLayout>

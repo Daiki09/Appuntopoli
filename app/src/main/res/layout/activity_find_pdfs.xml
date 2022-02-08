@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainBackground"
+    tools:context=".FindPdfs_Activity">
+
+    <include    android:id="@+id/personalpdfs_toolbar"
+        layout="@layout/app_bar_layout"> </include>
+
+    <RelativeLayout
+        android:id="@+id/findpdfs_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/personalpdfs_toolbar">
+
+        <EditText
+            android:id="@+id/findpdfs_search"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/border"
+            android:hint="Cerca.."
+            android:inputType="textMultiLine"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:textSize="30dp" />
+
+        <ImageButton
+            android:id="@+id/findpdfs_button"
+            android:layout_width="70dp"
+            android:padding="5dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="17dp"
+            android:layout_toEndOf="@id/findpdfs_search"
+            android:background="@drawable/inputs"
+            android:src="@drawable/search"
+            android:contentDescription="Cerca.." />
+
+    </RelativeLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/findpdfs_results"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/findpdfs_layout"
+        android:layout_margin="10dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</RelativeLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pdf_group"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="@color/whiteBackground" >
+
+    <ImageView
+        android:id="@+id/personalimagePdf"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/select_pdf" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="5dp" >
+
+        <TextView
+            android:id="@+id/personal_pdf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Titolo pdf"
+            android:textAlignment="textStart"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/personal_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nome Cognome"
+            android:textAlignment="textStart"
+            android:textColor="@android:color/black"
+            android:layout_marginRight="10dp"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

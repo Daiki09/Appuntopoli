@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login"
+    tools:context=".Setup_Activity" >
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/setup_profile_image"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="106dp"
+        android:layout_marginTop="58dp"
+        android:src="@drawable/profile" />
+
+    <EditText
+        android:id="@+id/setup_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="300dp"
+        android:background="@drawable/inputs"
+        android:textColor="@color/black"
+        android:ems="10"
+        android:hint="username"
+        android:textColorHint="@color/colorProfile"
+        android:inputType="textMultiLine"
+        android:padding="14dp"
+        android:drawableLeft="@drawable/username" />
+
+    <EditText
+        android:id="@+id/setup_full_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/setup_username"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/inputs"
+        android:textColor="@color/black"
+        android:ems="10"
+        android:hint="Nome e Cognome"
+        android:textColorHint="@color/colorProfile"
+        android:inputType="textMultiLine"
+        android:padding="14dp"
+        android:drawableLeft="@drawable/name" />
+
+    <EditText
+        android:id="@+id/setup_school"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/setup_full_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/inputs"
+        android:textColor="@color/black"
+        android:ems="10"
+        android:hint="Scuola/Università"
+        android:textColorHint="@color/colorProfile"
+        android:inputType="textMultiLine"
+        android:padding="14dp"
+        android:drawableLeft="@drawable/country" />
+
+    <TextView
+        android:id="@+id/avviso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/setup_school"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textSize="16sp"
+        android:textColor="@color/colorPrimary"
+        android:text="ATTENZIONE: UNA VOLTA INSERITI I DATI DOVRAI EFFETTUARE DI NUOVO IL LOGIN. Ricorda di confermare l'indirizzo e-mail tramite la mail ricevuta nell'indirizzo di posta elettronica inserito, altrimenti non sarai in grado di accedere al tuo account." />
+
+    <Button
+        android:id="@+id/setup_information_button"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/avviso"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/button"
+        android:padding="15dp"
+        android:text="Salva"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:backgroundTint="@color/colorPrimaryDark" />
+
+</RelativeLayout>

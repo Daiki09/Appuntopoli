@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="280dp"
+    tools:context=".CheckConnectionActivity"
+    android:background="@color/whiteBackground" >
+
+    <TextView
+        android:id="@+id/avviso_connessione"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clicca sull'immagine per controllare la tua connessione"
+        android:layout_margin="10dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="16sp"
+        android:textAlignment="center"
+        android:textColor="@color/colorProfile" />
+
+    <ImageView
+        android:id="@+id/check"
+        android:layout_below="@+id/avviso_connessione"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/nointernetconnection" />
+
+</RelativeLayout>

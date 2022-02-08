@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/register"
+    tools:context=".Profile_Activity" >
+
+    <include android:id="@+id/profile_toolbar"
+        layout="@layout/app_bar_layout"> </include>
+
+    <ScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="677dp"
+        android:layout_below="@+id/profile_toolbar"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/myprofile_image"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/profile" />
+
+            <TextView
+                android:id="@+id/myprofile_full_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/myprofile_image"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="70dp"
+                android:text="Nome completo"
+                android:textColor="@android:color/black"
+                android:textSize="35dp"
+                android:textAllCaps="false"
+                android:textAlignment="center"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/myprofile_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/myprofile_full_name"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="70dp"
+                android:text="Nome utente"
+                android:textColor="@android:color/black"
+                android:textSize="24dp"
+                android:textAllCaps="false"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/myprofile_school"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/myprofile_username"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="70dp"
+                android:hint="Scuola/Università: "
+                android:textColorHint="@color/colorProfile"
+                android:textColor="@android:color/black"
+                android:textSize="30dp"
+                android:padding="5dp"
+                android:textAllCaps="false"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/myprofile_competenze"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/myprofile_school"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="70dp"
+                android:hint="Competenze professionali: "
+                android:textColor="@android:color/black"
+                android:textColorHint="@color/colorProfile"
+                android:textSize="26dp"
+                android:paddingBottom="75dp"
+                android:textAllCaps="false"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/myprofile_apPunti"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/myprofile_competenze"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="70dp"
+                android:text="apPunti"
+                android:textColor="@android:color/black"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:textAllCaps="false"
+                android:textAlignment="center" />
+
+            <Button
+                android:id="@+id/myprofile_salva_modifiche"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/myprofile_apPunti"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/button"
+                android:padding="5dp"
+                android:text="salva modifiche"
+                android:textAllCaps="true"
+                android:textColor="@android:color/background_light"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:backgroundTint="@color/colorPrimaryDark" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
