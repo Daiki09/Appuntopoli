@@ -147,37 +147,40 @@ public class Pdf_Activity extends AppCompatActivity implements ConnectionReceive
 
         Title = PdfTitle.getText().toString();
 
-        AssetFileDescriptor fileDescriptor = null;
-        try {
-
-            fileDescriptor = getApplicationContext().getContentResolver().openAssetFileDescriptor(PdfUri , "r");
-
-        } catch (FileNotFoundException e) {
-
-            e.printStackTrace();
-
-        }
-
-        long fileSize = fileDescriptor.getLength()/1024;
-
-        if(PdfUri == null){
+        if (PdfUri == null) {
 
             Toast.makeText(Pdf_Activity.this, "Per favore, inserisci un Pdf", Toast.LENGTH_LONG).show();
 
-        }else if(TextUtils.isEmpty(Title)){
+        } else if (TextUtils.isEmpty(Title)) {
 
             Toast.makeText(Pdf_Activity.this, "Per favore, aggiungi una descrizione al tuo Pdf", Toast.LENGTH_LONG).show();
 
-        }else if(fileSize < 60) {
+        } else {
 
-            Toast.makeText(Pdf_Activity.this, "Per favore, inserisci un pdf valido, non vuoto e di qualità ", Toast.LENGTH_LONG).show();
+            AssetFileDescriptor fileDescriptor = null;
+            try {
 
-        }else {
+                fileDescriptor = getApplicationContext().getContentResolver().openAssetFileDescriptor(PdfUri , "r");
 
-            StartLoadingBar("Caricamento Pdf...");
+            } catch (FileNotFoundException e) {
 
-            StoringPdfToFirebaseStorage();
+                e.printStackTrace();
 
+            }
+
+            long fileSize = fileDescriptor.getLength()/1024;
+
+            if (fileSize < 60) {
+
+                Toast.makeText(Pdf_Activity.this, "Per favore, inserisci un pdf valido, non vuoto e di qualità ", Toast.LENGTH_LONG).show();
+
+            } else {
+
+                StartLoadingBar("Caricamento Pdf...");
+
+                StoringPdfToFirebaseStorage();
+
+            }
         }
 
     }
