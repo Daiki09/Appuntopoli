@@ -25,7 +25,7 @@ public class Register_Activity extends AppCompatActivity {
     private EditText UserEmail, UserPassword, UserConfirmPassword;
     private Button CreateAccountButton;
     private ProgressDialog loadingBar;
-    private TextView LoginLink;
+    private Button LoginLink;
 
     private FirebaseAuth mAuth;
 
